@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        * {
+            transition: .3s;
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        /* nav */
+        .max-1280 {
+            max-width: 1280px;
+            margin: auto;
+            padding: 6px 34px 7px 9px;
+        }
+
+        i.fa-solid.fa-cart-shopping::before {
+            display: inline-block;
+            width: 100%;
+            height: 10px;
+            background-color: rgb(0 0 0 0);
+            padding: 8px
+        }
+
+        i.fa-solid.fa-circle-user::before {
+            display: inline-block;
+            width: 100%;
+            height: 10px;
+            background-color: rgb(0 0 0 0);
+            padding: 8px 2px
+        }
+
+        /* swiper*/
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* text */
+        .container1 {
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 6rem 1.25rem;
+            background-color: 0 0 0 0;
+        }
+
+        .fs-big {
+            font-size: 1.875rem;
+        }
+
+        .fs-small {
+            font-size: 1rem;
+            color: #4b5563
+        }
+
+        .text-py {
+            padding: 1rem 0 1rem;
+        }
+
+        /* logo */
+        .img {
+            width: 80px;
+            height: 80px;
+            background-color: #e0e7ff;
+            border-radius: 50px;
+            padding: 20px;
+            margin-bottom: 20px;
+
+        }
+
+        /* text_2 */
+        .text-fs {
+            font-size: 17.7px;
+        }
+
+        .fw-1 {
+            font-weight: 400;
+        }
+
+        .fs-16 {
+            font-size: 16px;
+        }
+
+        .right-size {
+            width: 16px;
+            height: 16px;
+        }
+
+        .btn-size {
+            font-size: 18px;
+            padding: 8px 32px;
+            background-color: #6366f1;
+        }
+
+        .sq-size {
+            width: 120%;
+        }
+
+        .up-set {
+            background-color: #dfe0e2;
+            color: #111827;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0.04rem;
+        }
+
+        .fs-18 {
+            font-size: 18px;
+        }
+
+        .btn-2b {
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .fs-30 {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="mx-5">
+            <div class="mx-5">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light max-1280">
+                    <a class="navbar-brand px-3 ml-2" href="#"><img class="w-75 m-2  px-3" src="./svg-export/logo.svg"
+                            alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse flex-row-reverse " id="navbarNav">
+                        <ul class="navbar-nav align-items-center">
+                            <li class="nav-item active ml-4">
+                                <a class="nav-link " href="#">Blog</a>
+                            </li>
+                            <li class="nav-item active ml-4">
+                                <a class="nav-link" href="#">Portfolio</a>
+                            </li>
+                            <li class="nav-item active ml-4">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item active ml-4">
+                                <a class="nav-link" href="#">Content</a>
+                            </li>
+                            <li class="nav-item active ">
+                                <a class="nav-link h4" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link h5" href="#"><i class="fa-solid fa-circle-user"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./img/sea.jpg" alt=""></div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- text&logo -->
+        <div class="container">
+            <div class="container1">
+                <div class="row mx-auto flex-column align-items-center px-5 text-py">
+                    <p class="text-start fs-big">Raw Denim Heirloom Man Braid</p>
+                    <p class="text-start fs-small text-center mb-5">Blue bottle crucifix vinyl
+                        post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice<br>poutine, ramps
+                        microdosing
+                        banh
+                        mi
+                        pug.</p>
+                    <div class="row justify-content-center flex-nowrap mt-5">
+                        <div class="col-6 d-flex justify-content-center flex-column  bg-col align-items-center ">
+                            <img class="img" src="./svg-export/ECG.svg" alt="">
+                            <h5 class="text-center fw-1 mb-4">Shooting Stars</h5>
+                            <p class="text-center">Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                                taxidermy.
+                                Gastropub indxgo
+                                juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
+                            <a href="#" class="fs-16 mt-3 text-decoration-none">Learn More <img class="right-size"
+                                    src="./svg-export/right_1.svg" alt=""></a>
+                        </div>
+                        <div class="col-6 d-flex justify-content-center flex-column  bg-col align-items-center "><img
+                                class="img" src="./svg-export/scisssors.svg" alt="">
+                            <h5 class="text-center fw-1 mb-4">The Catalyzer</h5>
+                            <p class="text-center">Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                                taxidermy.
+                                Gastropub indxgo
+                                juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
+                            <a href="#" class="fs-16 mt-3 text-decoration-none">Learn More <img class="right-size"
+                                    src="./svg-export/right_1.svg" alt=""></a>
+                        </div>
+                        <div class="col-6 d-flex justify-content-center flex-column  bg-col align-items-center "><img
+                                class="img" src="./svg-export/people.svg" alt="">
+                            <h5 class="text-center fw-1 mb-4">Neptune</h5>
+                            <p class="text-center">Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                                taxidermy.
+                                Gastropub indxgo
+                                juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
+                            <a href="#" class="fs-16 mt-3 text-decoration-none">Learn More <img class="right-size"
+                                    src="./svg-export/right_1.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-size mt-5">Button</button>
+
+                </div>
+            </div>
+
+
+            <div class="container1 p-0">
+                <div class="row flex-nowrap justify-content-center">
+                    <h2 class="col-6 pl-4">Master Cleanse Reliac Heirloom</h2>
+                    <p class="col-10">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway
+                        tile
+                        poke
+                        farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies
+                        heirloom.</p>
+                </div>
+            </div>
+            <div class="row py-5 flex-nowrap mx-auto justify-content-center">
+                <div class="col-8 p-3">
+                    <div class="row">
+                        <div class="col p-1">
+                            <img src="https://dummyimage.com/500x300" class="w-100" alt="">
+                        </div>
+                        <div class="col p-1">
+                            <img src="https://dummyimage.com/501x301" class="w-100" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 p-1">
+                            <img src="https://dummyimage.com/600x360" class="w-100" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 p-3 ">
+                    <div class="row">
+                        <div class="col-12 p-1">
+                            <img src="https://dummyimage.com/600x360" class="w-100" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col p-1">
+                            <img src="https://dummyimage.com/500x300" class="w-100" alt="">
+                        </div>
+                        <div class="col p-1">
+                            <img src="https://dummyimage.com/501x301" class="w-100" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container1 ">
+            <div class="row justify-content-center flex-column align-items-center text-center ">
+                <h1 class="col-12 ">Pricing</h1>
+
+                <p class="col-6 mb-5">Banh mi cornhole echo park skateboard authentic crucifix neutra tilde lyft
+                    biodiesel
+                    artisan direct
+                    trade mumblecore 3 wolf moon twee</p>
+                <div class="mb-5"></div>
+                <table class="col-6 m-auto p-0 ">
+                    <tr class="row p-0 m-0 ">
+                        <th class="col-3 px-4 py-3 up-set">Plan</th>
+                        <th class="col-3 px-4 py-3 up-set">Speed</th>
+                        <th class="col-3 px-4 py-3 up-set">Storage</th>
+                        <th class="col-2 px-4 py-3 up-set">Price</th>
+                        <th class="col-1 px-4 py-3 up-set"></th>
+                    </tr>
+                    <tr class="row p-0 m-0 text-left fs-16 border-bottom">
+                        <td class="col-3 px-4 py-3 ">Start</td>
+                        <td class="col-3 px-4 py-3">5 Mb/s</td>
+                        <td class="col-3 px-4 py-3">15 GB</td>
+                        <td class="col-2 px-4 py-3 fs-18">Free</td>
+                        <td class="col-1 px-1 py-3"> <input type="radio"></td>
+                    </tr>
+                    <tr class="row p-0 m-0 text-left fs-16 border-bottom">
+                        <td class="col-3 px-4 py-3 ">Pro</td>
+                        <td class="col-3 px-4 py-3">25 Mb/s</td>
+                        <td class="col-3 px-4 py-3">25 GB</td>
+                        <td class="col-2 px-4 py-3 fs-18">$24</td>
+                        <td class="col-1 px-1 py-3"> <input type="radio"></td>
+                    </tr>
+                    <tr class="row p-0 m-0 text-left fs-16 border-bottom">
+                        <td class="col-3 px-4 py-3 ">Business</td>
+                        <td class="col-3 px-4 py-3">36 Mb/s</td>
+                        <td class="col-3 px-4 py-3"> 40 GB</td>
+                        <td class="col-2 px-4 py-3 fs-18">$50</td>
+                        <td class="col-1 px-1 py-3"> <input type="radio"></td>
+                    </tr>
+                    <tr class="row p-0 m-0 text-left fs-16 border-bottom">
+                        <td class="col-3 px-4 py-3 ">Exclusive</td>
+                        <td class="col-3 px-4 py-3">48 Mb/s</td>
+                        <td class="col-3 px-4 py-3">120 GB</td>
+                        <td class="col-2 px-4 py-3 fs-18">$72</td>
+                        <td class="col-1 px-1 py-3"> <input type="radio"></td>
+                    </tr>
+                </table>
+                <div class="col-6 row justify-content-between m-0 p-0">
+                    <a class="py-4 ml-4 fs-16" href="#">Learn More </a>
+                    <img width="15rem" class="m-0 p-0 mb-4 ml-2" src="./svg-export/right_3.svg" alt="">
+                    <button class="btn btn-primary mt-3 ml-auto px-4 mb-5 fs-16" type="submit">Button</button>
+                </div>
+            </div>
+            <div class="container1 mx-auto mx-5">
+                <div class="row col-12 flex-nowrap justify-content-between mx-5">
+
+                    <h2 class="col-5 ml-5 fs-30">
+                        <div class="ml-5"></div>Pitchfork Kickstarter Taxidermy
+                    </h2>
+
+                    <p class="col-5 mr-5">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify,
+                        subway tile poke
+                        farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom
+                        prism food truck ugh squid celiac humblebrag.<div class="ml-5"></div></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <!-- Swiper JS -->\
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            cssMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
